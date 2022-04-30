@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 const Navbar = () => {
 
     const amount = useSelector(state=>state.amount)
+    const name = useSelector(state=>state.name)
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,7 +37,7 @@ const Navbar = () => {
         </li>
       </ul>
       <form className="d-flex">
-        <button className="btn btn-primary" type="submit" disabled>Your Balance: {amount}</button>
+        <button className="btn btn-primary" type="submit" disabled>{name} Your Balance: {amount}</button>
       </form>
     </div>
   </div>
